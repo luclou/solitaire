@@ -1,0 +1,40 @@
+.gameBoard {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+.board {
+  background: #006400;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (orientation: landscape) {
+  .gameBoard {
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}
+
+@media (orientation: portrait) {
+  .gameBoard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+  }
+  .controls {
+    flex-direction: row;
+  }
+}
